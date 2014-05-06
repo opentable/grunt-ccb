@@ -32,6 +32,7 @@
     "grunt-contrib-jshint": "~0.8.0",
     "should": "~3.1.2"
   },
-  "sha": "e58af5e495209199553f0153e3a033ae12a611a0",
-  "lastCommitTimestamp": "2014-05-06T16:16:29Z"
+  "monkey": "woo",
+  "sha": "3528b9d9ed766e154843cfda5d004ea3f6bba29c",
+  "lastCommitTimestamp": "2014-05-06T16:35:03Z"
 }

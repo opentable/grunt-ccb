@@ -35,8 +35,17 @@ module.exports = function(grunt) {
     // These plugins provide necessary tasks.
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-mocha-test');
-    grunt.registerTask('test', ['jshint', 'package-github-data:test', 'mochaTest']);
+    grunt.registerTask('test', ['jshint', 'removePackageProperties', 'package-github-data:test', 'mochaTest']);
     grunt.registerTask('default', ['test']);
     grunt.loadTasks('tasks');
     grunt.loadTasks('tests/tasks');
+
+    grunt.registerTask('removePackageProperties', 'Removes the lastCommitTimestamp and sha from the package.json', function(){
+        var packagejson = require('./package.json');
+        delete packagejson.lastCommitTimestamp;
+        delete packagejson.sha;
+        packagejson.monkey = "woo";
+        grunt.verbose.write(packagejson);
+        grunt.file.write('package.json', JSON.stringify(packagejson, null, 2));
+    });
 };
