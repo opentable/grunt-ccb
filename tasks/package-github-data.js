@@ -39,7 +39,7 @@ module.exports = function(grunt){
 
                 grunt.verbose.writeln("Last commit: " + JSON.stringify(lastCommit));
 
-                packagejson.sha = lastCommit.sha;
+                packagejson.lastCommitSha = lastCommit.sha;
                 packagejson.lastCommitTimestamp = lastCommit.commit.committer.date;
 
                 grunt.file.write('package.json', JSON.stringify(packagejson, null, 2));

@@ -11,8 +11,7 @@ describe("updating the package.json with sha and last commit date", function(){
         isDate.should.be.true;
     })
 
-    it ("should populate the sha property", function(){
-        packagejson.should.have.property("sha");
-        packagejson.should.not.be.empty;
+    it ("should populate the lastCommitSha property", function(){
+        packagejson.should.have.property("lastCommitSha");
     })
 })

@@ -43,8 +43,7 @@ module.exports = function(grunt) {
     grunt.registerTask('removePackageProperties', 'Removes the lastCommitTimestamp and sha from the package.json', function(){
         var packagejson = require('./package.json');
         delete packagejson.lastCommitTimestamp;
-        delete packagejson.sha;
-        packagejson.monkey = "woo";
+        delete packagejson.lastCommitSha;
         grunt.verbose.write(packagejson);
         grunt.file.write('package.json', JSON.stringify(packagejson, null, 2));
     });
