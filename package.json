@@ -1,35 +1,37 @@
 {
-    "name": "package-github-data",
-    "version": "0.1.1",
-    "description": "Adds information from Github about this project to package.json",
-    "main": "Gruntfile.js",
-    "scripts": {
-        "test": "grunt test"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git://github.com/christriddle/package-github-data.git"
-    },
-    "keywords": [
-        "grunt"
-    ],
-    "author": "christriddle",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/christriddle/package-github-data/issues"
-    },
-    "homepage": "https://github.com/christriddle/package-github-data",
-    "peerDependencies": {
-        "grunt": "~0.4.2"
-    },
-    "dependencies": {
-        "request": "~2.33.0",
-        "github": "~0.1.16"
-    },
-    "devDependencies": {
-        "grunt-cli": "~0.1.13",
-        "grunt-mocha-test": "~0.9.0",
-        "grunt-contrib-jshint": "~0.8.0",
-        "should": "~3.1.2"
-    }
+  "name": "package-github-data",
+  "version": "0.1.1",
+  "description": "Adds information from Github about this project to package.json",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/christriddle/package-github-data.git"
+  },
+  "keywords": [
+    "grunt"
+  ],
+  "author": "christriddle",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/christriddle/package-github-data/issues"
+  },
+  "homepage": "https://github.com/christriddle/package-github-data",
+  "peerDependencies": {
+    "grunt": "~0.4.2"
+  },
+  "dependencies": {
+    "request": "~2.33.0",
+    "github": "~0.1.16"
+  },
+  "devDependencies": {
+    "grunt-cli": "~0.1.13",
+    "grunt-mocha-test": "~0.9.0",
+    "grunt-contrib-jshint": "~0.8.0",
+    "should": "~3.1.2"
+  },
+  "sha": "e58af5e495209199553f0153e3a033ae12a611a0",
+  "lastCommitTimestamp": "2014-05-06T16:16:29Z"
 }

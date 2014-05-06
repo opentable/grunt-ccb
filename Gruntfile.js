@@ -20,7 +20,7 @@ module.exports = function(grunt) {
                 src: ['tests/package-github-data-tests.js']
             }
         },
-        "package-github-data'": {
+        "package-github-data": {
             test: {
                 options: {
                     github: {
@@ -35,7 +35,7 @@ module.exports = function(grunt) {
     // These plugins provide necessary tasks.
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-mocha-test');
-    grunt.registerTask('test', ['jshint', 'package-github-data', 'mochaTest']);
+    grunt.registerTask('test', ['jshint', 'package-github-data:test', 'mochaTest']);
     grunt.registerTask('default', ['test']);
     grunt.loadTasks('tasks');
     grunt.loadTasks('tests/tasks');
