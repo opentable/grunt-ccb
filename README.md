@@ -1,2 +1,2 @@
-grunt-github-manifest
+grunt-package-manifest
 =====================
