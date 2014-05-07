@@ -27,14 +27,15 @@ module.exports = function(grunt) {
                         api_url: "http://localhost:8888/",
                         user: "user",
                         password: "password",
-                        project_id: "4321"
+                        project_id: "4321",
+                        ccb_issue_type: 20
                     },
                     project: {
                         name: "project",
                         version: "0.0.1"
                     },
-                    manifest: "tests/data/manifest.json",
-                    issue_type: 20
+                    manifest: "tests/data/manifest.json"
+
                 }
             },
 
@@ -43,14 +44,15 @@ module.exports = function(grunt) {
                     jira: {
                         api_url: "https://opentable.atlassian.net/rest/api/2/",
                         user: "user",
-                        password: "password"
+                        password: "password",
+                        project_id: "4321",
+                        ccb_issue_type: 20
                     },
                     project: {
                         name: "project",
                         version: "0.0.1"
                     },
-                    manifest: "manifest/manifest.json",
-                    issue_type: 20
+                    manifest: "manifest/manifest.json"
                 }
             }
         }

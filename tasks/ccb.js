@@ -23,7 +23,7 @@ module.exports = function(grunt){
                     summary: util.format('Deploying %s %s to production', options.project.name, options.project.version),
                     description: 'Commit log:\n\n' + grunt.file.read(options.manifest),
                     issuetype: {
-                        id: options.issue_type
+                        id: options.jira.ccb_issue_type
                     }
                 }
             };
