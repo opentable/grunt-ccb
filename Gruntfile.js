@@ -37,23 +37,6 @@ module.exports = function(grunt) {
                     manifest: "tests/data/manifest.json"
 
                 }
-            },
-
-            beavers_test: {
-                options: {
-                    jira: {
-                        api_url: "https://opentable.atlassian.net/rest/api/2/",
-                        user: "user",
-                        password: "password",
-                        project_id: "4321",
-                        ccb_issue_type: 20
-                    },
-                    project: {
-                        name: "project",
-                        version: "0.0.1"
-                    },
-                    manifest: "manifest/manifest.json"
-                }
             }
         }
     });
