@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "request": "~2.33.0",
-    "github": "~0.1.16"
+    "q": "^1.0.1"
   },
   "devDependencies": {
     "grunt-cli": "~0.1.13",

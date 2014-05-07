@@ -23,7 +23,34 @@ module.exports = function(grunt) {
         "ccb": {
             test: {
                 options: {
+                    jira: {
+                        api_url: "http://localhost:8888/",
+                        user: "user",
+                        password: "password",
+                        project_id: "4321"
+                    },
+                    project: {
+                        name: "project",
+                        version: "0.0.1"
+                    },
+                    manifest: "tests/data/manifest.json",
+                    issue_type: 20
+                }
+            },
 
+            beavers_test: {
+                options: {
+                    jira: {
+                        api_url: "https://opentable.atlassian.net/rest/api/2/",
+                        user: "user",
+                        password: "password"
+                    },
+                    project: {
+                        name: "project",
+                        version: "0.0.1"
+                    },
+                    manifest: "manifest/manifest.json",
+                    issue_type: 20
                 }
             }
         }
@@ -32,7 +59,7 @@ module.exports = function(grunt) {
     // These plugins provide necessary tasks.
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-mocha-test');
-    grunt.registerTask('test', ['jshint',  'ccb:test', 'mochaTest']);
+    grunt.registerTask('test', ['jshint',  'start-jira-server', 'ccb:test', 'mochaTest']);
     grunt.registerTask('default', ['test']);
     grunt.loadTasks('tasks');
     grunt.loadTasks('tests/tasks');

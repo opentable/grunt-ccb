@@ -1,0 +1,1 @@
+{"headers":{"content-type":"application/json","host":"localhost:8888","authorization":"Basic dXNlcjpwYXNzd29yZA==","accept":"application/json","content-length":"26","connection":"keep-alive"},"url":"/issue/1234/transitions","body":{"transition":{"id":"11"}}}
