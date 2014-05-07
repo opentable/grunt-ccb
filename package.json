@@ -1,14 +1,14 @@
 {
-  "name": "grunt-package-github",
-  "version": "0.1.1",
-  "description": "Adds information from Github about this project to package.json",
+  "name": "grunt-ccb",
+  "version": "0.0.1",
+  "description": "Create a CCB with manfiest information in JIRA",
   "main": "Gruntfile.js",
   "scripts": {
     "test": "grunt test"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/christriddle/grunt-package-github.git"
+    "url": "git://github.com/opentable/grunt-ccb.git"
   },
   "keywords": [
     "grunt"
@@ -16,9 +16,9 @@
   "author": "christriddle",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/christriddle/grunt-package-github/issues"
+    "url": "https://github.com/opentable/grunt-ccb/issues"
   },
-  "homepage": "https://github.com/christriddle/grunt-package-github",
+  "homepage": "https://github.com/opentable/grunt-ccb",
   "peerDependencies": {
     "grunt": "~0.4.2"
   },
@@ -31,8 +31,5 @@
     "grunt-mocha-test": "~0.9.0",
     "grunt-contrib-jshint": "~0.8.0",
     "should": "~3.1.2"
-  },
-  "monkey": "woo",
-  "lastCommitSha": "39808e0065a088171fbbaa1044906d5ff6be1c05",
-  "lastCommitTimestamp": "2014-05-06T17:11:32Z"
+  }
 }
