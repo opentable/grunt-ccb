@@ -37,7 +37,8 @@ grunt.initConfig({
                 name: "Location API",
                 version: "1.0.1"
             },
-            manifest: "tests/data/manifest.json"
+            manifest: "tests/data/manifest.json",
+            build_label: "project_123"
         }
     }
 })
@@ -55,3 +56,4 @@ grunt.initConfig({
     - `name` - Name of the project that is creating the ccb (displayed in the ccb subject)
     - `version` - Version of the project (displayed in the ccb subject)
 - `manifest` - Path to a file that contains the manifest for this project (this will be the body of the ccb)
+  `build_label` - The build that created this ccb

@@ -13,6 +13,7 @@ module.exports = function(grunt){
             options = this.options({});
         grunt.verbose.writeflags(options);
 
+        // todo: this should probably be passed in (as would be different for non-Opentable users)
         var createCcbContents = function(){
 
             return {
@@ -20,11 +21,12 @@ module.exports = function(grunt){
                     project: {
                         id: options.jira.project_id
                     },
-                    summary: util.format('Deploying %s %s to production', options.project.name, options.project.version),
-                    description: 'Commit log:\n\n' + grunt.file.read(options.manifest),
+                    summary: util.format('Deploying %s %s to production [%s]', options.project.name, options.project.version, options.build_label),
                     issuetype: {
                         id: options.jira.ccb_issue_type
-                    }
+                    },
+                    customfield_11502: grunt.template.today("isoDateTime"),
+                    customfield_11505: 'Commit log:\n\n' + grunt.file.read(options.manifest)
                 }
             };
 

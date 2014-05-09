@@ -1,8 +1,11 @@
 module.exports = function(grunt) {
     'use strict';
 
+    var pkg = grunt.file.readJSON('package.json');
+
     // Project configuration.
     grunt.initConfig({
+
         jshint: {
             all: [
                 'Gruntfile.js',
@@ -31,11 +34,11 @@ module.exports = function(grunt) {
                         ccb_issue_type: 20
                     },
                     project: {
-                        name: "project",
-                        version: "0.0.1"
+                      name: "projectname",
+                      version:"projectversion"
                     },
-                    manifest: "tests/data/manifest.json"
-
+                    manifest: "tests/data/manifest.json",
+                    build_label: "grunt-ccb_1234"
                 }
             }
         }
