@@ -54,6 +54,5 @@ grunt.initConfig({
     - `ccb_issue_type`  - Jira id of the type of issue to post the ccb as
 - `project` - TODO: We should use the properties in the package.json here
     - `name` - Name of the project that is creating the ccb (displayed in the ccb subject)
-    - `version` - Version of the project (displayed in the ccb subject)
 - `manifest` - Path to a file that contains the manifest for this project (this will be the body of the ccb)
   `build_label` - The build that created this ccb

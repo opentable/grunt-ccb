@@ -35,10 +35,9 @@ module.exports = function(grunt) {
                     },
                     project: {
                       name: "projectname",
-                      version:"projectversion"
                     },
                     manifest: "tests/data/manifest.json",
-                    build_label: "grunt-ccb_1234"
+                    build_number: "grunt-ccb_1234"
                 }
             }
         }
