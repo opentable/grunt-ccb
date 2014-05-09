@@ -139,7 +139,7 @@ module.exports = function(grunt){
         createCbb()
             .then(updateCcbToInDevelopmentState)
             .then(closeCcb)
-            .fail(function(error){
+            .catch(function(error){
                 grunt.fatal.fail(error);
             })
             .done(done);
