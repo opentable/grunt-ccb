@@ -52,7 +52,7 @@ module.exports = function(grunt){
                 json: ccbContents
             }, function(error, response, body){
 
-                if (error){
+                if (response.statusCode >= 300 || error){
                     deferred.reject(error);
                 }
                 else{
