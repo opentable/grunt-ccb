@@ -1,6 +1,6 @@
 {
   "name": "grunt-ccb",
-  "version": "0.1.3",
+  "version": "0.1.5",
   "description": "Create a CCB with manfiest information in JIRA",
   "main": "Gruntfile.js",
   "scripts": {
