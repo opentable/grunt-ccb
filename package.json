@@ -8,17 +8,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/christriddle/grunt-ccb.git"
+    "url": "git://github.com/opentable/grunt-ccb.git"
   },
   "keywords": [
     "grunt"
   ],
-  "author": "christriddle",
+  "author": "opentable",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/christriddle/grunt-ccb/issues"
+    "url": "https://github.com/opentable/grunt-ccb/issues"
   },
-  "homepage": "https://github.com/christriddle/grunt-ccb",
+  "homepage": "https://github.com/opentable/grunt-ccb",
   "peerDependencies": {
     "grunt": "~0.4.2"
   },
