@@ -2,7 +2,7 @@
 
 > Create a CCB with manfiest information in JIRA
 
-[![Build Status](https://travis-ci.org/christriddle/grunt-ccb.svg?branch=master)](https://travis-ci.org/christriddle/grunt-ccb)
+[![Build Status](https://travis-ci.org/opentable/grunt-ccb.svg?branch=master)](https://travis-ci.org/opentable/grunt-ccb)
 
 [![NPM](https://nodei.co/npm/grunt-ccb.png)](https://nodei.co/npm/grunt-ccb)
 
