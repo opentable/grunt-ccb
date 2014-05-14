@@ -26,4 +26,5 @@ node_modules
 
 .idea
 
-tests/data/actual
+tests/data/actual/ccb-request.json
+tests/data/actual/done-transition-request.json
