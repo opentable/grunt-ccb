@@ -32,7 +32,8 @@ grunt.initConfig({
                 user: "user",
                 password: "password",
                 project_id: 12100,
-                ccb_issue_type: 20
+                ccb_issue_type: 20,
+                ccb_done_state: 11
             },
             project: {
                 name: "Location API",
@@ -54,6 +55,7 @@ grunt.initConfig({
     - `password`  - Jira password
     - `project_id`  - Jira id of the project to post the ccb
     - `ccb_issue_type`  - Jira id of the type of issue to post the ccb as
+    - `ccb_done_state` - The transition id to end the ccb workflow
 - `project` - TODO: We should use the properties in the package.json here
     - `name` - Name of the project that is creating the ccb (displayed in the ccb subject)
 - `manifest` - Path to a file that contains the manifest for this project (this will be the body of the ccb)
