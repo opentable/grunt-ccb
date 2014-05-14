@@ -48,14 +48,15 @@ module.exports = function(grunt){
                 url: options.jira.api_url + "issue/",
                 headers: {
                     "Content-Type": "application/json",
-                    Accept: "application/json"
-                    // todo: add user agent
+                    Accept: "application/json",
+                    "User-Agent" : "Node Request"
                 },
                 method: 'POST',
                 auth: {
                     user: options.jira.user,
                     pass: options.jira.password
                 },
+                proxy: options.jira.proxy,
                 json: ccbContents
             }, function(error, response, body){
                 if (error) {
@@ -82,14 +83,15 @@ module.exports = function(grunt){
             request({
                 url: options.jira.api_url + util.format("issue/%s/transitions", ccbId),
                 headers: {
-                    "Content-Type": "application/json"
-                    // todo: add user agent
+                    "Content-Type": "application/json",
+                    "User-Agent" : "Node Request"
                 },
                 method: 'POST',
                 auth: {
                     user: options.jira.user,
                     pass: options.jira.password
                 },
+                proxy: options.jira.proxy,
                 json: {
                     "transition":
                     {
@@ -119,14 +121,15 @@ module.exports = function(grunt){
             request({
                 url: options.jira.api_url + util.format("issue/%s/transitions", ccbId),
                 headers: {
-                    "Content-Type": "application/json"
-                    // todo: add user agent
+                    "Content-Type": "application/json",
+                    "User-Agent" : "Node Request"
                 },
                 method: 'POST',
                 auth: {
                     user: options.jira.user,
                     pass: options.jira.password
                 },
+                proxy: options.jira.proxy,
                 json: {
                     "transition":
                     {
