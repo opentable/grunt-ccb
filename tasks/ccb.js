@@ -63,7 +63,7 @@ module.exports = function(grunt){
                     deferred.reject(error);
                 }
                 else if (response.statusCode >= 300 ) {
-                    deferred.reject("Bad response: " + response);
+                    deferred.reject(response.statusCode + " - bad response: " + JSON.stringify(response));
                 }
                 else {
                     var ccbId = body.id;
@@ -75,8 +75,8 @@ module.exports = function(grunt){
             return deferred.promise;
         };
 
-        var updateCcbToInDevelopmentState = function(ccbId){
-            grunt.verbose.writeln("Updating CCB to 'In development' state");
+        var updateCcbToDone = function(ccbId){
+            grunt.verbose.writeln("Updating CCB to 'Done' state");
 
             var deferred = q.defer();
 
@@ -95,7 +95,7 @@ module.exports = function(grunt){
                 json: {
                     "transition":
                     {
-                        "id": "11"
+                        "id": options.jira.ccb_done_state
                     }
                 }
             }, function(error, response, body){
@@ -103,7 +103,7 @@ module.exports = function(grunt){
                     deferred.reject(error);
                 }
                 else if (response.statusCode >= 300 ) {
-                    deferred.reject("Bad response: " + response);
+                    deferred.reject(response.statusCode + " - bad response: " + JSON.stringify(response));
                 }
                 else {
                     deferred.resolve(ccbId);
@@ -113,51 +113,9 @@ module.exports = function(grunt){
             return deferred.promise;
         };
 
-        var closeCcb = function(ccbId){
-            grunt.verbose.writeln("Updating CCB to 'Closed' state");
-
-            var deferred = q.defer();
-
-            request({
-                url: options.jira.api_url + util.format("issue/%s/transitions", ccbId),
-                headers: {
-                    "Content-Type": "application/json",
-                    "User-Agent" : "Node Request"
-                },
-                method: 'POST',
-                auth: {
-                    user: options.jira.user,
-                    pass: options.jira.password
-                },
-                proxy: options.jira.proxy,
-                json: {
-                    "transition":
-                    {
-                        "id": "21"
-                    }
-                }
-            }, function(error, response, body){
-                if (error) {
-                    deferred.reject(error);
-                }
-                else if (response.statusCode >= 300 ) {
-                    deferred.reject("Bad response: " + response);
-                }
-                else {
-                    deferred.resolve();
-                }
-            });
-
-            return deferred.promise;
-
-        };
-
         createCbb()
             .then(function(ccbId){
-                return updateCcbToInDevelopmentState(ccbId);
-            })
-            .then(function(ccbId){
-                return closeCcb(ccbId);
+                return updateCcbToDone(ccbId);
             })
             .catch(function(error){
                 grunt.fatal(error);

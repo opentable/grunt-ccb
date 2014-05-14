@@ -31,7 +31,8 @@ module.exports = function(grunt) {
                         user: "user",
                         password: "password",
                         project_id: "4321",
-                        ccb_issue_type: 20
+                        ccb_issue_type: 20,
+                        ccb_done_state: 11
                     },
                     project: {
                       name: "projectname",

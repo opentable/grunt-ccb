@@ -3,8 +3,7 @@ var http = require("http"),
     server = {},
 
     createCbbRequest = fs.openSync('tests/data/actual/ccb-request.json', 'w'),
-    inDevTransitionRequest = fs.openSync('tests/data/actual/in-dev-transition-request.json', 'w'),
-    closeTransitionRequest = fs.openSync('tests/data/actual/close-transition-request.json', 'w');
+    doneTransitionRequest = fs.openSync('tests/data/actual/done-transition-request.json', 'w');
 
 module.exports = function(grunt){
     grunt.registerTask('start-jira-server', function(){
@@ -29,15 +28,11 @@ module.exports = function(grunt){
                     response.writeHead(200, {"Content-Type": "application/json"});
                     response.write('{ "id": 1234 }');
                 }
-                else if (bodyJson.transition.id === "11"){ //in-development
+                else if (bodyJson.transition.id === 11){ //done
 
-                    fs.writeSync(inDevTransitionRequest, JSON.stringify({ headers: request.headers, url: request.url, body: bodyJson }));
+                    fs.writeSync(doneTransitionRequest, JSON.stringify({ headers: request.headers, url: request.url, body: bodyJson }));
                     response.writeHead(200, {"Content-Type": "application/json"});
 
-                } else if (bodyJson.transition.id === "21"){ //close
-
-                    fs.writeSync(closeTransitionRequest, JSON.stringify({ headers: request.headers, url: request.url, body: bodyJson }));
-                    response.writeHead(200, {"Content-Type": "application/json"});
                 }
                 response.end();
             });
