@@ -27,7 +27,8 @@ grunt.initConfig({
     ccb: {
         options: {
             jira: {
-                api_url: "https://opentable.atlassian.net/rest/api/2/",
+                api_url: "https://company.atlassian.net/rest/api/2/",
+                proxy : null,
                 user: "user",
                 password: "password",
                 project_id: 12100,
@@ -48,6 +49,7 @@ grunt.initConfig({
 
 - `jira`
     - `api_url` - Url of the Jira api root
+    - `proxy` - Full url of proxy including port
     - `user` - Jira username
     - `password`  - Jira password
     - `project_id`  - Jira id of the project to post the ccb
