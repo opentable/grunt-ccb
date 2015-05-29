@@ -22,7 +22,7 @@ module.exports = function(grunt){
                         project: {
                             id: options.jira.project_id
                         },
-                        summary: util.format('Deploying %s %s to production', options.project.name, options.buildNumber),
+                        summary: util.format('Deploying %s %s to production', options.project.name, options.build_number),
                         issuetype: {
                             id: options.jira.ccb_issue_type
                         },
