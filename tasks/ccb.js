@@ -27,7 +27,7 @@ module.exports = function(grunt){
                             id: options.jira.ccb_issue_type
                         },
                         customfield_11502: grunt.template.today("isoDateTime"),
-                        customfield_11505: 'Commit log:\n\n' + grunt.file.read(options.manifest)
+                        customfield_11505: 'Commit log'
                     }
                 };
             }
@@ -57,7 +57,8 @@ module.exports = function(grunt){
                     pass: options.jira.password
                 },
                 proxy: options.jira.proxy,
-                json: ccbContents
+                json: ccbContents,
+                file: options.manifest
             }, function(error, response, body){
                 if (error) {
                     deferred.reject(error);
