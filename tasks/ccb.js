@@ -42,8 +42,6 @@ module.exports = function(grunt){
             var ccbContents = createCcbContents(),
                 deferred = q.defer();
 
-            grunt.verbose.writeln(JSON.stringify(ccbContents));
-
             request({
                 url: options.jira.api_url + "issue/",
                 headers: {
